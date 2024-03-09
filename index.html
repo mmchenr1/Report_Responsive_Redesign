@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Molly McHenry"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+        <title>Responsive Redesign Writeup</title>
+    </head>
+
+    <body>
+        <h1>Responsive Redesign of Suzanne Collins' Website </h1>
+        <!-- Description of the Assignment -->
+        <p>
+        For this assignment, I chose a page of a website that exhibits poor design and 
+        redisigned it to be more usable and accessibile. The process consisted of analyzing 
+        my chosen page, speed sketching design options, creating lo-fi wireframes, a style 
+        guide, hi-fi wireframes, and finally putting it all into code. 
+        An important part of this redesign process is the responsiveness of the site I designed 
+        to adapt to different dimensions and layouts. During the design process, I specifically
+        considered mobile, tablet, and desktop layouts and used responsive units when needed.
+        </p>
+        
+        <p>
+        Jump to: <a variant="nav-link" pr="0" href="#Choosing-a-page">Choosing a page</a> • 
+                 <a variant="nav-link" pr="1" href="#Ideation">Ideation</a> • 
+                 <a variant="nav-link" pr="2" href="#Lo-Fi Wireframes">Lo-fi Wireframes</a> • 
+                 <a variant="nav-link" pr="3" href="#Style-Guide">Style Guide</a> • 
+                 <a variant="nav-link" pr="4" href="#Hi-Fi-Mockups">High-Fidelity Mockups</a> • 
+                 <a variant="nav-link" pr="5" href="#Coding">My Site</a> • 
+                 <a variant="nav-link" pr="6" href="#Conclusion">Key Takeaways</a>  
+        </p>
+
+        <!-- A look at Suzanne Collins' page (part 1 answers) -->
+        <div class="Choosing-a-page">
+        <h2>Choosing a Page to Redesign</h2>
+        <p>
+        I chose to redesign the <a href="https://www.suzannecollinsbooks.com/works.htm">"Works" page 
+        of the author Suzanne Collins' site </a>. Currently, the page layout does not lend itself to 
+        straightforward and obvious navigation. More specifically, here are a list of issues with the 
+        original site:
+        <ul>
+            <li> To access more information about a particular book, users can click on the title of the 
+                book in the middle section of the page, but this text isn't indicated to be a link and 
+                rather looks like just a header, resulting in questionable learnability.
+            </li>
+            <li> It's not obvious what the user should be doing from the page design, causing issues with 
+                learnability and memorability. Assuming that the purpose of the site is to sell Collins' 
+                books, the design doesn’t lend itself to letting the user navigate to a purchasing point.
+            </li>
+            <li> The book descriptions in the middle section of the page lack a consistent rule for ordering, with 
+                some series listed backwards chronologically and others forwards.
+            </li>
+            <li> The page has responsiveness issues! At the tablet-sized dimensions, there are obvious 
+                mistakes in the styling, like an empty yellow box appearing in the upper right corner where 
+                a menu button will appear once in mobile dimensions.
+            </li>
+            <li> The layout of the page on mobile doesn't seem to be designed with user experience in mind, but 
+                rather is a simple transfer of components from a horiztonal to vertical flexbox . The left panel 
+                is moved under the main panel, resulting in a long section of book covers, all of different 
+                dimensions and alignments. 
+            </li>
+        </ul>
+
+        There are also considerable accessibility concerns with the original design. The color scheme of yellow on
+        white creates many low contrast components, epecially in the navigation bar where the font weight is already 
+        very low, adding to readability issues. There are also multiple instances of empty header elements that seem 
+        to have been used to add spacing between elements.
+        </p>
+        </div>
+
+        <!-- Design Process (lofi, style guide, hifi) -> need to justify and explain why i made certain decisions-->
+        <div id="Ideation">
+            <h2>Ideation</h2>
+            
+            <div class="ideation-tasks-container">
+                <div class="ideation-task">
+                    <p>With these critiques of the original page in mind, I sat down for 9 minutes and sketched out 9 redesign ideas.</p>
+                    <img class="planning-img" id="speed-sketch-img" src="assets/speed_sketches.jpg"/>
+                </div>
+
+                <div class="ideation-task">
+                    <p>From this brainstorming exercise, I created this final sketch for a desktop layout.</p>
+                    <img class="planning-img" id="final-sketch-img" src="assets/final_sketch.jpg"/>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="Lo-Fi Wireframes">
+            <h2>Low Fidelity Wireframes</h2>
+            <text>With my final sketch as reference, I created a wireframe for desktop, tablet, and mobile screen sizes. The wireframes feature annotations in red that can be found below the images.</text>
+
+            <div id="lo-fi-wrapper">
+                <div class="lo-fi-section">
+                    <h3>Desktop</h3>
+                    <div class="lo-fi-img-container">
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Desktop_1.jpg"/>
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Desktop_2.jpg"/>
+                    </div>
+                </div>
+
+                <div class="lo-fi-section">
+                    <h3>Tablet</h3>
+                    <div class="lo-fi-img-container">
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Tablet_1.jpg"/>
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Tablet_2.jpg"/>
+                    </div>
+                </div>
+
+                <div class="lo-fi-section">
+                    <h3>Mobile</h3>
+                    <div class="lo-fi-img-container">
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Mobile_1.jpg"/>
+                        <img class="planning-img" id="final-sketch-img" src="assets/Lofi_Mobile_2.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <text>Annotations:</text>
+            <ol>
+                <li>Books are organized according to series, increasing efficiency and memorability for frequent users.</li>
+                <li>There is a purchase button under each book, so that users have easy access to the books being advertised.</li>
+                <li>All information about a book is located on the main page! To access different book information, there are buttons 
+                    on the series carousel that clearly mark scrolling left or right. The number of books in the series is marked in the navigation panel along 
+                    with a user's position in the carousel. Additionally, upcoming books are visible. </li>
+                <li>By rearranging the layout for different screen sizes, the responsiveness issues with the first page are corrected.</li>
+                <li>On mobile specifically, a series dropdown is introduced to help users quickly navigate to the series of their choice, rather 
+                    than having to scroll through long sections.
+                </li>
+                <li>On tablet and mobile, the information from the quick links footer is moved to another page that is accessible through the menu button on the 
+                    upper left corner of the screen. Because the screen width is smaller, scrolling through the series sections will take longer than on desktop, so 
+                    putting the quick links in a place that is accessible from the top of the page allows for easier access.
+                </li>
+            </ol>
+
+            </p>
+        </div>
+
+        <div id="Style-Guide">
+            <h2>Style Guide</h2>
+            <p>
+            Now for some styling! Keeping color contrasts in mind, I created a style guide with the aim of capturing the 
+            spirit of Suzanne Collins' works while also remaining accessible. Particularly, the two fonts chosen for 
+            the different levels of headers are reminiscent of the font Collins' uses on the covers of her most iconic series, 
+            <i>The Hunger Games</i>.
+            </p>
+
+            <h3>Color</h3>
+            <h4>Primary Colors</h4>
+            <div class="color-flex" id="primary-color-circles">
+                <div>
+                    <span id="black"></span> 
+                    <p> #0B2027 <br>
+                        <b>Rich Black</b> <br>
+                        used for text and dark background
+                    </p>
+                </div>
+
+                <div>
+                    <span id="white"></span> 
+                    <p> #F7F7FF <br>
+                       <b>Ghost White</b> <br>
+                        used for text and light background
+                    </p>
+                </div>
+
+                <div>
+                    <span id="pink"></span> 
+                    <p> #B8336A <br>
+                        <b>Raspberry Rose</b> <br>
+                        used for accents and section headers
+                    </p>
+                </div>
+
+                <div>
+                    <span id="green"></span> 
+                    <p> #09814A <br>
+                        <b>Sea Green</b> <br>
+                        used for page header and footer backdrops
+                    </p>
+                </div>
+            </div>
+
+            <h4>Button Colors</h4>
+            <div class="color-flex" id="nutton-color-circles">
+                <div>
+                    <span id="blue-dark"></span> 
+                    <p> #0041D5C <br>
+                        <b>Penn Blue</b> <br>
+                        used for pressed buttons
+                    </p>
+                </div>
+
+                <div>
+                    <span id="blue-med"></span>
+                    <p> #0542DB <br>
+                        <b>Palatinate Blue</b> <br>
+                        used for hovered state of buttons
+                    </p>
+                </div>
+
+                <div>
+                    <span id="blue"></span>
+                    <p> #1254F8 <br>
+                        <b>RISD Blue</b> <br>
+                        default shade of buttons
+                    </p>
+                </div>
+
+                <div>
+                    <span id="silver"></span>
+                    <p> #B9B9B9 <br>
+                        <b>Silver</b> <br>
+                        used for disabled buttons
+                    </p>
+                </div>
+            </div>
+            
+            <h3>Typography</h3>
+            Unless otherwise specified, line heights are 1.75 and font weights are 400px.
+            <div id="typography-section">
+                
+                <h4>Bebas Neue</h4>
+                <div class="font-section-wrapper">
+                    <div class="bebas-neue font-section">
+
+                        <div class="font-case">
+                            <div>
+                                <p id="site-header-typography-desktop">Site Header -- Desktop, Tablet</p> 
+                                <text>size: 80px, line height: 1</text>
+                            </div>
+                            
+                            <div>
+                                <p id="site-header-typography-mobile">Site Header -- Mobile</p>
+                                <text>size: 40px, line height: 1</text>
+                            </div>
+                        </div>
+
+                        <div class="font-case">
+                            <div>
+                                <p id="page-headers-typography">Page Headers -- Desktop</p> 
+                                <text>size: 80px</text>
+                            </div>
+
+                            <div>
+                                <p id="page-headers-typography-tablet">Page Headers -- Tablet</p> 
+                                <text>size: 80px</text>
+                            </div>
+
+                            <div>
+                                <p id="page-headers-typography-mobile">Page Headers -- Mobile</p> 
+                                <text>size: 80px</text>
+                            </div>
+                        </div>
+                        
+                        <div class="font-case">
+                            <div>
+                                <p id="navbar-typography">Nav Bar Buttons - Desktop</p> 
+                                <text>size: 32px</text>
+                            </div>
+                        </div>
+                        
+                        <div class="font-case">
+                            <div>
+                                <p id="menu-typography-tablet">Menu Buttons - Tablet</p> 
+                                <text>size: 60px</text>
+                            </div>
+
+                            <div>
+                                <p id="menu-typography-mobile">Menu Buttons - Mobile</p> 
+                                <text>size: 32px</text>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <h4>Play</h4>
+                <div class="font-section-wrapper">
+                    <div class="play font-section">
+                        <div class="font-case"> 
+                            <div>
+                                <p id="section-headers-typography">Section Headers -- Desktop, Tablet, Mobile</p> 
+                                <text>size: 32px</text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Manrope</h4>
+                <div class="font-section-wrapper">
+                    <div class="manrope font-section">
+                        <div class="font-case"> 
+                            <div>
+                                <p id="book-titles-typography">Book Titles</p> 
+                                <text>size: 28px, weight: 600, line height: 1</text>
+                            </div>
+                        </div>
+
+                        <div class="font-case"> 
+                            <div>
+                                <p id="body-text-typography">body & button text -- Desktop, Tablet, Mobile</p> 
+                                <text>size: 18px</text>
+                            </div>
+                        </div>
+
+                        <div class="font-case"> 
+                            <div>
+                                <a id="text-links-typography">in-text links</a> 
+                                <text>size: 18px, weight: 500 default, 700 when clicked</text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Design</h3>
+            <div class="design-sections-wrapper">
+                <div class="design-section" id="icons">
+                    <h4>Icons</h4>
+                    <div class="icon-section">
+
+                        <div class="icon-item">
+                        <h5>Menu Open</h5>
+                        <div id="menu-icon">
+                            <svg class = "menu-button-svg" fill="none" viewBox="0 0 20 16">
+                                <path class="menu-button-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M2 2h16.6M2 8h16.6M2 14h16.6"/>
+                            </svg>
+                        </div>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <h5>Left Arrow</h5>
+                            <div id="left-arrow-icon">
+                                <svg class="arrow-svg" fill="none" viewBox="0 0 12 17">
+                                    <path fill-rule="evenodd" d="M4.378.725C3.701.04 2.461-.14 1.61.323.757.785.616 1.716 1.293 2.4L7.08 8.255.786 13.822c-.722.639-.64 1.571.183 2.084.823.512 2.076.41 2.797-.229l6.84-6.05c.046-.021.09-.043.134-.067.45-.244.7-.617.74-1.016.126-.502-.094-1.029-.641-1.37a1.945 1.945 0 0 0-.187-.102L4.378.725Z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="icon-item">
+                            <h5>Right Arrow</h5>
+                            <div id="right-arrow-icon">
+                                <svg class="arrow-svg" fill="none" viewBox="0 0 12 17">
+                                    <path fill-rule="evenodd" d="M4.378.725C3.701.04 2.461-.14 1.61.323.757.785.616 1.716 1.293 2.4L7.08 8.255.786 13.822c-.722.639-.64 1.571.183 2.084.823.512 2.076.41 2.797-.229l6.84-6.05c.046-.021.09-.043.134-.067.45-.244.7-.617.74-1.016.126-.502-.094-1.029-.641-1.37a1.945 1.945 0 0 0-.187-.102L4.378.725Z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>  
+
+                        <div class="icon-item">
+                            <h5>Dropdown Arrow</h5>
+                            <div id="dropdown-arrow-icon">
+                                <svg class="dropdown-icon-svg blue-button-icon" width="12" height="8" fill="none" viewBox="0 0 12 8">
+                                    <path class="dropdown-icon" fill-rule="evenodd" 
+                                        d="M11.056 2.794c.399-.38.502-1.078.23-1.56-.273-.483-.817-.566-1.217-.186L6.056 4.865 2.242.717C1.87.31 1.324.359 1.022.824c-.3.465-.242 1.17.131 1.576l4.12 4.482.025.046c.138.244.345.386.568.417.3.081.617-.042.822-.358a.934.934 0 0 0 .05-.087l4.318-4.106Z" 
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-section" id="buttons">
+                    <h4>Buttons</h4>
+                        <p>Buttons are blue with a border radius of 40px if not circular. Icons and labels are Ghost White and the color of the button itself adheres to the button colors palette. 
+                            The Menu button on tablet and mobile is the exception because it is located within the site header bar. The menu button is transparent with a white symbol to provide 
+                            proper contrast with the green header backdrop.
+                        </p>
+                        <div class="button-section">
+
+                        <div class="button-item">
+                            <h5>Purchase Button</h5>
+                            <button class="purchase-button long-button blue-button carousel-component">
+                                Purchase
+                            </button>
+                        </div>
+
+                    <div class="button-item">
+                            <h5>Right Scroll Button</h5>
+                            <button class="nav-arrow-button nav-arrow-right blue-button" alt="scroll right">
+                                <text style="display: none;">scroll right button</text> <!-- DIY alt text for accessibility (since WAIVE doesn't recognize the alt tag) -->
+                                <svg class="arrow-svg" fill="none" viewBox="0 0 12 17">
+                                    <path fill-rule="evenodd" d="M4.378.725C3.701.04 2.461-.14 1.61.323.757.785.616 1.716 1.293 2.4L7.08 8.255.786 13.822c-.722.639-.64 1.571.183 2.084.823.512 2.076.41 2.797-.229l6.84-6.05c.046-.021.09-.043.134-.067.45-.244.7-.617.74-1.016.126-.502-.094-1.029-.641-1.37a1.945 1.945 0 0 0-.187-.102L4.378.725Z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            
+                        </div>
+
+                        <div class="button-item">
+                            <h5>Left Scroll Button</h5>
+                            <button class="nav-arrow-button nav-arrow-left blue-button" alt="scroll left">
+                                <text style="display: none;">scroll left button</text> <!-- DIY alt text for accessibility (since WAIVE doesn't recognize the alt tag) -->
+                                <svg class="arrow-svg" fill="none" viewBox="0 0 12 17">
+                                    <path fill-rule="evenodd" d="M4.378.725C3.701.04 2.461-.14 1.61.323.757.785.616 1.716 1.293 2.4L7.08 8.255.786 13.822c-.722.639-.64 1.571.183 2.084.823.512 2.076.41 2.797-.229l6.84-6.05c.046-.021.09-.043.134-.067.45-.244.7-.617.74-1.016.126-.502-.094-1.029-.641-1.37a1.945 1.945 0 0 0-.187-.102L4.378.725Z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            
+                        </div>
+
+                        <div class="button-item">
+                            <h5>Dropdown Button</h5>
+                            <button class="series-dropdown-button blue-button long-button">series
+                                <svg class="dropdown-icon-svg blue-button-icon" width="12" height="8" fill="none" viewBox="0 0 12 8">
+                                    <path class="dropdown-icon" fill-rule="evenodd" 
+                                        d="M11.056 2.794c.399-.38.502-1.078.23-1.56-.273-.483-.817-.566-1.217-.186L6.056 4.865 2.242.717C1.87.31 1.324.359 1.022.824c-.3.465-.242 1.17.131 1.576l4.12 4.482.025.046c.138.244.345.386.568.417.3.081.617-.042.822-.358a.934.934 0 0 0 .05-.087l4.318-4.106Z" 
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="button-item">
+                            <h5>Menu Button</h5>
+                            <button class="menu-button" alt="menu button">
+                                <text style="display: none;">menu button</text> <!-- DIY alt text for accessibility (since WAIVE doesn't recognize the alt tag) -->
+                                <svg class = "menu-button-svg" fill="none" viewBox="0 0 20 16">
+                                    <path class="menu-button-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M2 2h16.6M2 8h16.6M2 14h16.6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+
+                
+                <div class="design-section">
+                    <h4>Navigation Bar and Menu</h4>
+                    <p>At the top of the Desktop Page, there's a navbar to navigate between pages. In the tablet and mobile versions of this page, this navbar is replaced by a 
+                        menu, which can be opened by clicking on the menu icon in the top left corner. Clicking the menu icon opens an overlay with links to the other pages and includes 
+                        a link to the footer contents, which have been transfered to a new page due to design concerns.
+                    </p>
+                    <div class="nav-menu-links-section">
+                        <div class="button-item">
+                            <h5>Navbar Button (Desktop)</h5>
+                            <div class="navbar-wrapper">
+                                <a class="nav-link">Page Link</a>
+                            </div>
+                        </div>
+
+                        <div class="button-item">
+                            <h5>Menu Item Button (Tablet)</h5>
+                            <div class="menu-wrapper">
+                                <a class="menu-link-tablet menu-link">Page Link</a>
+                            </div>
+                        </div>
+                    
+
+                        <div class="button-item">
+                            <h5>Menu Item Button (Mobile)</h5>
+                            <div class="menu-wrapper">
+                                <a class="menu-link-mobile menu-link">Page Link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="Hi-Fi-Mockups">
+            <h2>High Fidelity Mockup</h2>
+            <p>
+            Over the course of creating the high fidelity mockups seen below, the colors changed often to ensure that elements 
+            on the page have a high contrast ratio. Additionally, on the mobile design, I added a dropdown menu to easily jump 
+            to a series section on the page because there is considerably more scrolling involved when moving the book descriptions 
+            to a vertical format.
+            </p>
+            <div class="hifi-figma-wrapper">
+                <iframe id="figma-embedded-hifi" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FMCE5bDxKNEd3xQfKpJQa4P%2FSuzanne-Collins-Website-Redesign-(UI%252FUX-assignment)%3Ftype%3Ddesign%26node-id%3D174%253A1826%26mode%3Ddesign%26t%3DTzaKceT6qzKcSyyl-1" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- my site -->
+        <div id="Coding">
+            <h2>Coding the Redesigned Page</h2>
+            <p>
+            Finally, it was time to code it all up. Using pure HTML and CSS, I translated my Figma mockup to a webpage. This process 
+            was very smooth and only required some resizing of font (on Figma the font seemed smaller than it rendered in HTML) and slight 
+            adjustments to colors for contrast. The finished product is deployed 
+            <a href="https://mmchenr1.github.io/Response_Redesign_Suzanne_Collins/">HERE</a>. 
+            The buttons and book carousels are mocked and conform to the style guide in their static state. If I had more time, I would 
+            have liked to add the tablet and mobile menu screen so that the navbar functionality is still viewable from this page in all 
+            screen formats (it's designed for, but not implemented because of the mocked menu button).
+            </p>
+        </div>
+
+        <!-- lessons learned -->
+        <div id="Conclusion">
+            <h2>Takeaways</h2>
+            <p>
+                This project taught me the importance of good wireframes! A good low fidelity frame lends to a better process of creating 
+                a high fidelity mockup, which then translates to a painless coding process. I learned that the more planning that happens 
+                earlier in the development process, the smoother it is overall. I also learned to check my color contrasts! It wasn't until 
+                I was translating my hi-fi mockups to HTML code that I realized that some of my contrasts were not high enough.
+            </p>
+        </div>
+    </body>
+</html>
